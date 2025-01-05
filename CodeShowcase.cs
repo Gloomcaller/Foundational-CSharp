@@ -17,6 +17,9 @@ class CodeShowcase
             Console.WriteLine("5. Petting Zoo Planner");
             Console.WriteLine("6. RSVP Tracker");
             Console.WriteLine("7. Find Two Coins for Target Change");
+            Console.WriteLine("8. Cash Register");
+            Console.WriteLine("9. Dice Minigame");
+            Console.WriteLine("10. Email Extension Logic");
             Console.WriteLine("0. Exit");
             Console.Write("Select an option: ");
 
@@ -45,6 +48,15 @@ class CodeShowcase
                 case "7":
                     RunTwoCoinsFinder();
                     break;
+                case "8":
+                    RunCashRegister();
+                    break;
+                case "9":
+                    RunDiceMinigame();
+                    break;
+                case "10":
+                    RunEmailExtensionLogic();
+                    break;
                 case "0":
                     running = false;
                     break;
@@ -63,7 +75,6 @@ class CodeShowcase
         Console.WriteLine("Exiting program. Goodbye!");
     }
 
-    // FizzBuzz example
     static void RunFizzBuzz()
     {
         Console.Clear();
@@ -78,7 +89,6 @@ class CodeShowcase
         }
     }
 
-    // Fortune Teller example
     static void RunFortuneTeller()
     {
         Console.Clear();
@@ -107,7 +117,6 @@ class CodeShowcase
         TellFortune();
     }
 
-    // Hero vs Monster game
     static void RunHeroVsMonster()
     {
         Console.Clear();
@@ -131,7 +140,6 @@ class CodeShowcase
         Console.WriteLine(hero > monster ? "Hero wins!" : "Monster wins!");
     }
 
-    // IPv4 Validation
     static void RunIPv4Validator()
     {
         Console.Clear();
@@ -157,7 +165,6 @@ class CodeShowcase
         }
     }
 
-    // Petting Zoo Planner
     static void RunPettingZooPlanner()
     {
         Console.Clear();
@@ -190,16 +197,14 @@ class CodeShowcase
         }
     }
 
-    // RSVP Tracker
     static void RunRSVPTracker()
     {
         Console.Clear();
         Console.WriteLine("=== RSVP Tracker ===");
-        // Add RSVP logic here
+        // TODO: Add logic 
         Console.WriteLine("RSVP logic to be added.");
     }
 
-    // Two Coins Finder
     static void RunTwoCoinsFinder()
     {
         Console.Clear();
@@ -236,4 +241,77 @@ class CodeShowcase
             Console.WriteLine($"Change found at positions: {result[i, 0]}, {result[i, 1]}");
         }
     }
+    static void RunCashRegister()
+    {
+        Console.Clear();
+        Console.WriteLine("=== Cash Register ===");
+
+        int[] denominations = { 50, 20, 10, 5, 1 };
+        Console.Write("Enter the total amount to give change for: ");
+        if (int.TryParse(Console.ReadLine(), out int amount))
+        {
+            Console.WriteLine($"Change for {amount}:");
+            foreach (int denomination in denominations)
+            {
+                int count = amount / denomination;
+                if (count > 0)
+                {
+                    Console.WriteLine($"{count} x {denomination}");
+                    amount %= denomination;
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid amount entered.");
+        }
+    }
+    static void RunDiceMinigame()
+    {
+        Console.Clear();
+        Console.WriteLine("=== Dice Minigame ===");
+
+        Random random = new Random();
+        Console.Write("Enter the number of dice rolls: ");
+        if (int.TryParse(Console.ReadLine(), out int rolls) && rolls > 0)
+        {
+            int total = 0;
+            for (int i = 0; i < rolls; i++)
+            {
+                int roll = random.Next(1, 7);
+                Console.WriteLine($"Roll {i + 1}: {roll}");
+                total += roll;
+            }
+            Console.WriteLine($"Total score: {total}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid number of rolls entered.");
+        }
+    }
+    static void RunEmailExtensionLogic()
+    {
+        Console.Clear();
+        Console.WriteLine("=== Email Extension Logic ===");
+
+        string[] emails = { "user1@gmail.com", "user2@yahoo.com", "user3@hotmail.com", "user4@gmail.com" };
+        Console.WriteLine("Emails:");
+        foreach (string email in emails)
+        {
+            Console.WriteLine(email);
+        }
+
+        Console.Write("Enter the email domain to filter (e.g., gmail.com): ");
+        string domain = Console.ReadLine();
+
+        Console.WriteLine($"\nEmails with domain '{domain}':");
+        foreach (string email in emails)
+        {
+            if (email.EndsWith("@" + domain))
+            {
+                Console.WriteLine(email);
+            }
+        }
+    }
+
 }
