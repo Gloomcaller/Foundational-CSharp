@@ -74,7 +74,6 @@ class CodeShowcase
 
         Console.WriteLine("Exiting program. Goodbye!");
     }
-
     static void RunFizzBuzz()
     {
         Console.Clear();
@@ -88,7 +87,6 @@ class CodeShowcase
             Console.WriteLine("");
         }
     }
-
     static void RunFortuneTeller()
     {
         Console.Clear();
@@ -116,7 +114,6 @@ class CodeShowcase
         luck = random.Next(100);
         TellFortune();
     }
-
     static void RunHeroVsMonster()
     {
         Console.Clear();
@@ -139,7 +136,6 @@ class CodeShowcase
 
         Console.WriteLine(hero > monster ? "Hero wins!" : "Monster wins!");
     }
-
     static void RunIPv4Validator()
     {
         Console.Clear();
@@ -164,7 +160,6 @@ class CodeShowcase
                 Console.WriteLine($"{ip} is an invalid IPv4 address");
         }
     }
-
     static void RunPettingZooPlanner()
     {
         Console.Clear();
@@ -196,15 +191,45 @@ class CodeShowcase
             Console.WriteLine(animal);
         }
     }
-
     static void RunRSVPTracker()
     {
-        Console.Clear();
-        Console.WriteLine("=== RSVP Tracker ===");
-        // TODO: Add logic 
-        Console.WriteLine("RSVP logic to be added.");
-    }
+        string[] guestList = { "Rebecca", "Nadia", "Noor", "Jonte" };
+        string[] rsvps = new string[10];
+        int count = 0;
 
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("=== RSVP Tracker ===");
+            Console.WriteLine("1. Add RSVP\n2. Show RSVPs\n3. Exit");
+            Console.Write("Choose an option: ");
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.Write("Name: ");
+                    string name = Console.ReadLine();
+                    if (Array.Exists(guestList, g => g.Equals(name, StringComparison.OrdinalIgnoreCase)) || count < rsvps.Length)
+                    {
+                        Console.Write("Party Size: ");
+                        int.TryParse(Console.ReadLine(), out int partySize);
+                        Console.Write("Allergies: ");
+                        string allergies = Console.ReadLine();
+                        rsvps[count++] = $"Name: {name}, Party: {partySize}, Allergies: {allergies ?? "none"}";
+                        Console.WriteLine($"{name} added.");
+                    }
+                    else Console.WriteLine($"{name} not on the guest list or list full.");
+                    break;
+                case "2":
+                    Console.WriteLine("RSVPs:");
+                    for (int i = 0; i < count; i++) Console.WriteLine(rsvps[i]);
+                    break;
+                case "3": return;
+                default: Console.WriteLine("Invalid option."); break;
+            }
+            Console.WriteLine("Press Enter to continue...");
+            Console.ReadLine();
+        }
+    }
     static void RunTwoCoinsFinder()
     {
         Console.Clear();
