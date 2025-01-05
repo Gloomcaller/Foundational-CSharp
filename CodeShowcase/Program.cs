@@ -1,5 +1,4 @@
-using System;
-
+﻿using System;
 class CodeShowcase
 {
     static void Main(string[] args)
@@ -338,5 +337,4 @@ class CodeShowcase
             }
         }
     }
-
 }

@@ -1,0 +1,15 @@
+D:\Projects\Foundational-CSharp\CodeShowcase\bin\Debug\net8.0\CodeShowcase.exe
+D:\Projects\Foundational-CSharp\CodeShowcase\bin\Debug\net8.0\CodeShowcase.deps.json
+D:\Projects\Foundational-CSharp\CodeShowcase\bin\Debug\net8.0\CodeShowcase.runtimeconfig.json
+D:\Projects\Foundational-CSharp\CodeShowcase\bin\Debug\net8.0\CodeShowcase.dll
+D:\Projects\Foundational-CSharp\CodeShowcase\bin\Debug\net8.0\CodeShowcase.pdb
+D:\Projects\Foundational-CSharp\CodeShowcase\obj\Debug\net8.0\CodeShowcase.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Foundational-CSharp\CodeShowcase\obj\Debug\net8.0\CodeShowcase.AssemblyInfoInputs.cache
+D:\Projects\Foundational-CSharp\CodeShowcase\obj\Debug\net8.0\CodeShowcase.AssemblyInfo.cs
+D:\Projects\Foundational-CSharp\CodeShowcase\obj\Debug\net8.0\CodeShowcase.csproj.CoreCompileInputs.cache
+D:\Projects\Foundational-CSharp\CodeShowcase\obj\Debug\net8.0\CodeShowcase.sourcelink.json
+D:\Projects\Foundational-CSharp\CodeShowcase\obj\Debug\net8.0\CodeShowcase.dll
+D:\Projects\Foundational-CSharp\CodeShowcase\obj\Debug\net8.0\refint\CodeShowcase.dll
+D:\Projects\Foundational-CSharp\CodeShowcase\obj\Debug\net8.0\CodeShowcase.pdb
+D:\Projects\Foundational-CSharp\CodeShowcase\obj\Debug\net8.0\CodeShowcase.genruntimeconfig.cache
+D:\Projects\Foundational-CSharp\CodeShowcase\obj\Debug\net8.0\ref\CodeShowcase.dll
