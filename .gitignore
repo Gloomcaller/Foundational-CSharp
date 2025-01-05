@@ -1,20 +1,16 @@
+# User-specific files
 .vscode/
 
+# Build results
 bin/
 obj/
 
+# Windows Installer files
 *.cab
 *.msi
 *.msm
 *.msp
 
-*.cab
-*.msi
-
-*.cab
-*.msi
-
+# Windows Installer binaries
 *.exe
-*.pdb
-
 *.pdb
