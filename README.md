@@ -1,6 +1,6 @@
 # Code Showcase Project
 
-This project is a collection of interesting and diverse code examples that I found cool while working through the FCC Microsoft C# exercises.
+This project is a collection of interesting and diverse code examples that I found cool while working through the Microsoft Foundational C# certification.
 It's intended as a showcase of various coding concepts, ranging from simple logic to mini-games and utility functions.
 
 ## Features
